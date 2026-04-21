@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>SHREPE</title>
+<meta content="SHREPE — the swampiest memecoin on Solana. Join the swamp, throw onions, and ride the green candles." name="description"/>
+<link as="audio" href="/assets/music.mp3" rel="preload"/>
+<link href="/style.css" rel="stylesheet">
+</link><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="True" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Chewy&amp;display=swap" rel="stylesheet"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+</head>
+<link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
+
+
+
+<body>
+<!-- Intro / Gate (autoplay is triggered only after click) -->
+<div id="intro">
+<img alt="intro background" class="intro-bg" src="/assets/intro-bg.png"/>
+<div class="intro-content">
+<h1 class="logo">SHREPE</h1>
+<button class="btn btn-hero" id="enterBtn">click on me</button>
+</div>
+</div>
+<!-- Header (sticks on top after entering) -->
+<header class="hidden" id="siteHeader">
+<div class="brand">
+<span class="brand-title">SHREPE</span>
+</div>
+<nav class="nav-actions">
+<a aria-label="Telegram" class="icon-link" href="https://t.me/SHREPE_MEME" rel="noopener" target="_blank"><img class="icon-img" src="/assets/tg-icon.png" alt="Telegram icon"/></a>
+<a aria-label="Twitter" class="icon-link" href="https://x.com/SHREPE_MEME" rel="noopener" target="_blank"><img class="icon-img" src="/assets/x-icon.png" alt="Twitter icon"/></a>
+<a aria-label="Dexscreener" class="icon-link" href="#coming_soon" rel="noopener" target="_blank"><img class="icon-img" src="/assets/dex-icon.png" alt="Dexscreener icon"/></a>
+<button aria-label="Mute/Unmute Music" class="icon-link" id="muteToggle" title="Mute/Unmute Music">🔊</button>
+</nav>
+</header>
+<!-- Main Sections -->
+<main class="hidden" id="app">
+<!-- Section 1: Hero / Buy -->
+<section class="slide bg-cover" id="s1" style="--bg:url('/assets/main-bg.png')">
+<div class="hero">
+<div class="cta">
+<h1 class="ogre-title">$SHREPE</h1>
+<div class="contract">
+<span class="code" id="contractText"></span>
+<button aria-label="Copy contract" class="btn btn-copy" id="copyBtn">Copy</button>
+</div>
+<a class="btn btn-buy" href="coming_soon" id="buyBtnTop">BUY</a>
+</div>
+</div>
+<img alt="SHREPE holding coin" class="shrek shrek-center" src="/assets/shrek-flip.gif"/>
+</section>
+<!-- Section 2: About + fun interaction -->
+<section class="slide bg-cover" id="s2" style="--bg:url('/assets/second-bg2.png')">
+<div class="about card">
+<h2>About the Meme</h2>
+<p>
+          Deep in the BNB swamp, <strong>$SHREPE</strong> guards his golden onions (and your bags).
+          He’s part ogre, part frog, 100% degen. Don’t step in the mud — unless it’s green.
+        </p>
+<div class="fun">
+<button class="btn" id="jokeBtn">Make SHREPE say a joke</button>
+<div class="speech hidden" id="speech"></div>
+</div>
+</div>
+<img alt="Shrek standing" class="shrek shrek-left wiggle-on-hover" id="shrek1" src="/assets/sherk1.png"/>
+</section>
+<!-- Section 3: How to Buy -->
+<section class="slide bg-cover" id="s3" style="--bg:url('/assets/third-bg.png')">
+<img alt="Shrek by the cliff" class="shrek shrek-right" src="/assets/shrek3.png"/>
+<div class="howto">
+<h2>How to Buy</h2>
+<div class="steps">
+<div class="step board fx-hover">
+<div class="num">1</div>
+<h3>Create a Wallet</h3>
+<p>Install Trust Wallet, create a wallet, write down your seed phrase (never share).</p>
+</div>
+<div class="step board fx-hover">
+<div class="num">2</div>
+<h3>Get Some BNB</h3>
+<p>Buy BNB (BEP-20) on an exchange, withdraw to your Trust Wallet BSC address.</p>
+</div>
+<a class="step board fx-hover" href="https://dexscreener.com/coming_soon" rel="noopener" target="_blank">
+<div class="num">3</div>
+<h3>Open PancakeSwap</h3>
+<p>Open PancakeSwap, Connect Wallet, select BNB Chain.</p>
+</a>
+<div class="step board fx-hover" id="buy">
+<div class="num">4</div>
+<h3>Swap for $SHREPE</h3>
+<p>Paste the token contract address, choose amount, set slippage if needed, Confirm Swap.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Site Footer -->
+<footer class="site-footer">
+<div class="footer-inner">
+<div class="brand">
+<span class="brand-title">$SHREPE</span>
+<span class="tagline">In swamp we trust</span>
+</div>
+<nav aria-label="Footer" class="links">
+</nav>
+<span class="disclaimer">© 2025 — Not affiliated with DreamWorks.</span>
+
+</div>
+</footer>
+</main>
+<audio id="bgm" loop="" preload="auto" src="/assets/music.mp3"></audio>
+<script>
+    window.SITE_CONFIG = {
+      CONTRACT: "coming_soon" // TODO: replace with real CA
+    };
+  </script>
+<script src="script.js"></script>
+</body>
+</html>
